@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  conector:
+    build: .
+    enviroment:
+      DB_HOSTNAME: 'tryton-postgres'
+      DB_PASSWORD: "${POSTGRES_PASSWORD}"

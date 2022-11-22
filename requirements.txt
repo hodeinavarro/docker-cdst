@@ -1,0 +1,14 @@
+bs4
+charset-normalizer
+Jinja2
+MarkupSafe
+psk-numword
+pycairo
+PyGObject
+pyodbc
+qrcode
+requests-file
+sendgrid
+starkbank-ecdsa
+suds-py3
+xmltodict

@@ -1,0 +1,8 @@
+.dockerignore
+Dockerfile
+Dockerfiledb
+docker-compose.yml
+.git
+.gitignore
+modules.txt
+comands
