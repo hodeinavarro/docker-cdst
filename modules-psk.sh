@@ -4,7 +4,6 @@
 echo "[INFO] Installing trytonpsk modules... "
 
 modules="
-trytonpsk-account_statement_co
 trytonpsk-account_bank_statement
 trytonpsk-account_col
 trytonpsk-account_co_pyme
@@ -15,7 +14,7 @@ trytonpsk-account_voucher
 trytonpsk-analytic_co
 trytonpsk-analytic_payroll
 trytonpsk-analytic_report
-trytonpsk-analytic_sale_pos 
+trytonpsk-analytic_sale_pos
 trytonpsk-analytic_voucher
 trytonpsk-collection
 trytonpsk-commission_global
@@ -36,7 +35,6 @@ trytonpsk-sale_pos
 trytonpsk-sale_pos_frontend
 trytonpsk-sale_salesman
 trytonpsk-sale_shop
-trytonpsk-sale_goal
 trytonpsk-staff
 trytonpsk-staff_access
 trytonpsk-staff_access_extratime
