@@ -5,10 +5,11 @@ echo "[INFO] Installing trytonpsk modules... "
 
 modules="
 trytonpsk-account_bank_statement
-trytonpsk-account_col
 trytonpsk-account_co_pyme
+trytonpsk-account_col
 trytonpsk-account_exo
 trytonpsk-account_invoice_discount
+trytonpsk-account_statement_co
 trytonpsk-account_stock_latin
 trytonpsk-account_voucher
 trytonpsk-analytic_co
@@ -25,12 +26,12 @@ trytonpsk-electronic_payroll
 trytonpsk-email
 trytonpsk-invoice_report
 trytonpsk-party_personal
-trytonpsk-production_accounting
 trytonpsk-product_reference
 trytonpsk-purchase_co
 trytonpsk-purchase_discount
 trytonpsk-reports
 trytonpsk-sale_charge
+trytonpsk-sale_goal
 trytonpsk-sale_pos
 trytonpsk-sale_pos_frontend
 trytonpsk-sale_salesman

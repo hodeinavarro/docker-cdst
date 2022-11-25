@@ -15,4 +15,6 @@ RUN apt-get update \
     && apt-get update \
     && ACCEPT_EULA=Y apt-get install -y msodbcsql17 unixodbc-dev
 RUN pip3 install -r requirements.txt
+RUN rm -r /usr/local/lib/python3.7/dist-packages/trytond/modules/account
+RUN mv account /usr/local/lib/python3.7/dist-packages/trytond/modules/
 RUN ./modules-psk.sh
