@@ -58,3 +58,12 @@ docker run -it --rm --network tryton postgres psql -h tryton-postgres -U postgre
 >     --publish 0.0.0.0:8000:8000 \
 >     --detach \
 >     tryton/tryton
+
+> docker run \
+>	--name tryton-cron \
+>	--link tryton-postgres:postgres \
+>	--network tryton \
+>	--env DB_PASSWORD=${POSTGRES_PASSWORD} \
+>	--detach \
+>	tryton/tryton \
+>	trytond-cron -d tryton

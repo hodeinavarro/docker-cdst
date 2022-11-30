@@ -6,7 +6,7 @@ WORKDIR /trytoncdst
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     make build-essential gnupg2 unixodbc-dev python3-dev \
-    python3-gi python3-gi-cairo libcairo2-dev \
+    python3-gi python3-gi-cairo libcairo2-dev libreoffice\
     && rm -rf /var/lib/apt/lists/*
 RUN apt-get update \
     && apt-get install -y curl apt-transport-https \
