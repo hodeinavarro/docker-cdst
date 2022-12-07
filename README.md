@@ -59,6 +59,7 @@ docker run -it --rm --network tryton postgres psql -h tryton-postgres -U postgre
 >     --detach \
 >     tryton/tryton
 
+### Crear contenedor con tryton-cron
 > docker run \
 >	--name tryton-cron \
 >	--link tryton-postgres:postgres \
