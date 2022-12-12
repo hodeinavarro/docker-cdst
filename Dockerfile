@@ -18,3 +18,4 @@ RUN pip3 install -r requirements.txt
 RUN rm -r /usr/local/lib/python3.7/dist-packages/trytond/modules/account
 RUN mv account /usr/local/lib/python3.7/dist-packages/trytond/modules/
 RUN ./modules-psk.sh
+RUN ./patchs_6.sh
