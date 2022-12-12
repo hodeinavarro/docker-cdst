@@ -3,6 +3,14 @@ USER root
 RUN mkdir /trytoncdst
 COPY . /trytoncdst
 WORKDIR /trytoncdst
+RUN mv move.py /usr/local/lib/python3.7/dist-packages/trytond/modules/account/move.py
+RUN mv patchs/report.py /usr/local/lib/python3.7/dist-packages/trytond/report/report.py
+RUN mv patchs/stock_es.po /usr/local/lib/python3.7/dist-packages/trytond/modules/stock/locale/es.po
+RUN mv patchs/sale_es.po /usr/local/lib/python3.7/dist-packages/trytond/modules/sale/locale/es.po
+RUN mv patchs/purchase_es.po /usr/local/lib/python3.7/dist-packages/trytond/modules/purchase/locale/es.po
+RUN mv patchs/asset.xml /usr/local/lib/python3.7/dist-packages/trytond/modules/account_asset/
+RUN mv patchs/account.xml /usr/local/lib/python3.7/dist-packages/trytond/modules/commission/
+RUN mv patchs/invoice.py /usr/local/lib/python3.7/dist-packages/trytond/modules/account_invoice/
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     make build-essential gnupg2 unixodbc-dev python3-dev \
@@ -15,12 +23,4 @@ RUN apt-get update \
     && apt-get update \
     && ACCEPT_EULA=Y apt-get install -y msodbcsql17 unixodbc-dev
 RUN pip3 install -r requirements.txt
-RUN mv move.py /usr/local/lib/python3.7/dist-packages/trytond/modules/account/move.py
 RUN ./modules-psk.sh
-RUN mv patchs/report.py /usr/local/lib/python3.7/dist-packages/trytond/report/report.py
-RUN mv patchs/stock_es.po /usr/local/lib/python3.7/dist-packages/trytond/modules/stock/locale/es.po
-RUN mv patchs/sale_es.po /usr/local/lib/python3.7/dist-packages/trytond/modules/sale/locale/es.po
-RUN mv patchs/purchase_es.po /usr/local/lib/python3.7/dist-packages/trytond/modules/purchase/locale/es.po
-RUN mv patchs/asset.xml /usr/local/lib/python3.7/dist-packages/trytond/modules/account_asset/
-RUN mv patchs/account.xml /usr/local/lib/python3.7/dist-packages/trytond/modules/commission/
-RUN mv patchs/invoice.py /usr/local/lib/python3.7/dist-packages/trytond/modules/account_invoice/
