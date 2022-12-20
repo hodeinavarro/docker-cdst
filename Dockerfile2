@@ -1,11 +1,11 @@
-FROM tryton/cdst:7.0 as builder
+FROM tryton/cdst:base as builder
 USER root
 COPY trytoncdst-conector /trytoncdst-conector
 WORKDIR /trytoncdst-conector
 RUN pip3 uninstall -y trytoncdst-conector
 RUN python3 setup.py install
 
-FROM tryton/cdst:7.0
+FROM tryton/cdst:base
 USER root
 COPY trytoncdst-conector /trytoncdst-conector
 WORKDIR /trytoncdst-conector

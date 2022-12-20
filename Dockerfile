@@ -11,6 +11,7 @@ RUN mv patchs/purchase_es.po /usr/local/lib/python3.7/dist-packages/trytond/modu
 RUN mv patchs/asset.xml /usr/local/lib/python3.7/dist-packages/trytond/modules/account_asset/
 RUN mv patchs/account.xml /usr/local/lib/python3.7/dist-packages/trytond/modules/commission/
 RUN mv patchs/invoice.py /usr/local/lib/python3.7/dist-packages/trytond/modules/account_invoice/
+RUN mv trytond.conf /etc/trytond.conf
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     make build-essential gnupg2 unixodbc-dev python3-dev \
